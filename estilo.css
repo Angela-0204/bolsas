@@ -1,0 +1,862 @@
+
+/*Header*/
+
+ nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 460px;
+    width: 105%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    margin-top: 120px;
+    font-size: 50px;
+    color:#ffffff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+     /* Fondo del título y navbar */
+      
+     header{
+       
+         background-attachment: scroll; /* Quitar 'fixed' puede ayudar a evitar el efecto extraño */
+         width: 100%;
+        height: 600px;
+        background: #e0f8e0;  /* fallback for old browsers */
+        background: linear-gradient(to right, hsla(110, 100%, 88%, 0.406), hsla(141, 100%, 74%, 0.616)), url(Imagen1.png);
+         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  ;
+        background: linear-gradient(to right, hsla(106, 100%, 87%, 0.489), hsla(139, 100%, 75%, 0.685)), url(Imagen1.png);
+         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+         background-size: cover;
+        
+         position: relative;
+     }
+            /* Título */
+            .marquee {
+                font-family: "Anton", sans-serif;
+                font-size: 32px;
+                font-weight: 400;
+                color: #131313;
+                margin: 0;
+                text-align: center;
+            }
+    
+            /* Carousel Image Styling */
+            .carousel-item img {
+                display: block;
+                margin: 0 auto;
+                max-height: 400px;
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+    
+            /* Navbar Branding */
+            .navbar-brand {
+                font-family: 'Georgia', serif;
+                font-size: 28px;
+                font-weight: bold;
+                color: #28a745 !important;
+            }
+    
+            .navbar-brand:hover {
+                color: #1e7e34 !important;
+            }
+    
+        /* General Card Styling */
+.card {
+    border: 1px solid #67e484; /* Light green border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    overflow: hidden;
+}
+
+
+
+
+
+/* Button Styling for 'Ver más' */
+.btn-ver-mas {
+    background-color: #5cb85c; /* Light Green */
+    color: rgb(251, 222, 222); /* Light text color */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ver-mas:hover {
+    background-color: #4cae4c; /* Darker Green */
+    color: #070707;  /* Darker text */
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #28a745;  /* Green border for modals */
+}
+
+.modal-header {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #28a745;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Navigation Bar Inside Wave */
+nav {
+    position: absolute;
+    top: -7px; /* Ajusta este valor para posicionarlo dentro de la onda */
+    
+    width: 100%;
+    display: flex;
+   
+    align-items: center;
+    z-index: 10; /* Asegúrate de que quede encima del difuminado */
+}
+
+.menu {
+    list-style: none;
+    font-size: 10px;
+    padding: 0;
+    margin-left: 69.30%;
+    display: flex;
+    align-items: center;
+   
+    border-radius: 10px;
+    padding: 5px 10px; /* Espaciado dentro del menú */
+    
+}
+
+.menu > li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu > li a {
+    color: #ffffff; /* Verde del diseño */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 5px 5px;
+    transition: color 0.7s ease, background-color 0.7s ease;
+    border-radius: 5px;
+}
+
+.menu > li a:hover {
+    color: #ffffff;
+    background-color: #48c17c; /* Fondo verde al hacer hover */
+}
+
+/* Dropdown Styles */
+.menu > li .dropdown {
+    display: none;
+    position: absolute;
+    top: 20px; /* Espaciado entre el menú y el dropdown */
+    left: 50%;
+    transform: translateX(-50%);
+   
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 5px;
+    z-index: 100;
+}
+
+.menu > li .dropdown li {
+    margin: 5px 0;
+}
+
+.menu > li .dropdown li a {
+    color: #2e2e2e;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 5px 10px;
+    display: block;
+    transition: color 0.7s ease, background-color 0.7s ease;
+    border-radius: 5px;
+}
+
+.menu > li .dropdown li a:hover {
+    color: #ffffff;
+    background-color: #24c46a;
+}
+
+.menu > li:hover .dropdown {
+    display: block;
+}
+
+
+.carousel-item img {
+    display: block;
+    margin: 0 auto;
+    max-height: 400px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Modal Close Button */
+.close {
+    color: #28a745;
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+.close:hover {
+    color: #62e180;
+}
+
+
+.card-header {
+    
+    background-color: #28a745;  /* Green background */
+    font-weight: bold;
+    
+}
+
+.card-img-top {
+    width: 180%;
+    height: 120%; /* Permite el ajuste automático */
+    margin: 0; /* Evita márgenes extra */
+    padding: 0;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+  padding: 0;
+  height: 100px; 
+}
+
+.tarjeta {
+    flex: 1;
+    max-width: 32%; /* Ajusta este valor para el tamaño deseado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.tarjeta img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.card { 
+    height: 100%;
+     /* Asegura que todas las tarjetas tengan la misma altura */ } 
+
+.card-text{
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0; /* Asegura que no haya margen extra */
+    padding: 0px; /* Reduce el espacio interno si es necesario */
+     
+    font-size: 13px;
+}
+
+.card-title{
+    margin-right: 20px;
+    font-size: 15px;
+    text-align: justify;
+    margin-top: -10px;
+}
+
+.btn-ver-mas {
+    background-color: #28a745;
+    color: rgb(0, 0, 0);
+}
+
+.btn-ver-mas:hover {
+    background-color: #1e7e34;
+    color: rgb(10, 10, 10);
+}
+.container h2{
+
+    text-align: center;
+    margin-bottom: 90px;
+    font-family: "Anton";
+    font-size: 60px;
+    color: #4cae4c;
+}
+
+
+.knowledge { 
+    background-color: #e0f8e0;
+     background-image: radial-gradient(#ec3dcf 0.8px, transparent 0.5px), radial-gradient(#feb5f357 0.5px, #ffcdf50d 0.5px);
+      background-size: 20px 20px; 
+      background-position: 0 0, 10px 10px; 
+      overflow: hidden; 
+    } 
+      .knowledge__container{ 
+        display: grid; 
+        grid-template-columns: 2fr 1fr;
+         gap: 1em; 
+         align-items: start; /* Cambié align-items a start para alinear elementos al inicio */ 
+        } 
+         .knowledge__picture{
+             max-width: 300px; 
+            } 
+            .knowledge__paragraph{
+                 line-height: 1.7; 
+                 margin-bottom: 15px; 
+                 margin-top: -75px; 
+                
+                 /* Añadí un margen superior negativo para subir el párrafo */ 
+                } 
+                .subtitle {
+                     margin-top: 40px; /* Añadí un margen superior para bajar el título */ 
+                }
+ .knowledge__img{ 
+    margin-top: 20x;
+    margin-bottom: 10px;
+    margin-left: 30%; 
+    width: 100%;
+     display: block;
+};
+
+.testimony{
+    background-color: #e0f8e0;
+    background-image: radial-gradient(#ec3dcf 0.8px, transparent 0.5px), radial-gradient(#feb5f357 0.5px, #ffcdf50d 0.5px);
+     background-size: 20px 20px; 
+     background-position: 0 0, 10px 10px; 
+     overflow: hidden; ;
+}
+
+.testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.testimony__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 40% 60%;
+}
+
+.testimony__texts{
+   margin-bottom: 20%;
+    margin-left: 10%;
+    margin-top: 88px;
+    max-width: 500px;
+}
+
+.testimony__texts h2{
+ 
+    text-align: center;
+    font-size: 45px;
+    color: #000000;
+
+}
+
+.testimony__review { 
+    font-size: 35px;
+    margin-top: -65px; 
+    text-align: center;
+    text-transform: uppercase;
+   
+    /* Margen superior negativo para acercar el párrafo al título */ }
+
+
+
+.testimony h1{
+    font-family: "Anton";
+    text-align: center;
+    font-size: 60px;
+    color: #4cae4c;
+
+}
+
+.testimony__arrow{
+    width: 90%;
+    cursor: pointer;
+}  
+
+.products{
+    
+    padding: 50px 0;
+    text-align: center;
+}
+.products h2{
+    color: #4cae4c;
+    font-family: 'Anton';
+    font-size: 60px;
+    
+    margin-bottom: 50px;
+}
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+}
+.product {
+    text-align: center;
+    padding: 30px;
+    box-shadow:  0 0 20px rgba(117, 255, 105, 0.642);
+}
+.product img{
+    width: 180px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.product h3{
+    font-size: 20px;
+    color: #040404;
+    font-family: 'Anton';
+   
+    margin-bottom: 15px;
+}
+
+.product p, .precio{
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+ .precio{
+    font-weight: 800;
+ }
+ .icons{
+    padding:50px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+
+ }
+ .icon-1{
+    flex-basis: calc(33.33% - 30px);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #000000;
+
+ }
+ .icon-txt h3{
+    font-size: 20px;
+    color: #000000;
+    font-family: 'oswald', sans-serif;
+    text-transform: uppercase;
+
+ }
+
+ .icon-txt p{
+    font-size: 16px;
+    color: #000000;
+ }
+ .btn-2{
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #ff77c0b0;
+    color: #030303;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.btn-3{
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #000000;
+    color: #030303;
+    border-radius: 5px;
+}
+
+
+footer{
+    background: #c2f2d718;  /* fallback for old browsers */
+    padding: 30px 0 0px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #000000;
+    border-bottom: 3px solid #2af850;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #000000;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+   margin-top: 10px;
+   margin-bottom: 30px;
+    color: #9e9797;
+}
+
+
+
+
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    header {
+        height: auto; /* Permite que el header ajuste su altura automáticamente */
+        background-size: cover; /* Asegura que la imagen de fondo se ajuste correctamente */
+        background-position: center; /* Centra la imagen de fondo */
+    }
+
+    header .textos-header {
+        height: auto; /* Ajusta automáticamente la altura */
+        width: 90%; /* Reduce el ancho para evitar desbordamiento */
+        padding: 20px;
+    }
+
+    .textos-header h1 {
+        font-size: 24px; /* Reduce el tamaño del texto principal */
+        margin-top: 50px; /* Ajusta el margen superior */
+    }
+
+    .textos-header h2 {
+        font-size: 18px; /* Reduce el tamaño del subtítulo */
+        margin-top: 10px;
+    }
+
+    nav {
+        padding: 10px; /* Reduce el padding general del menú */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 70%;
+    }
+
+    nav > a {
+        display: block; /* Asegura que cada enlace esté en su propia línea si es necesario */
+        font-size: 16px; /* Ajusta el tamaño del texto para mayor legibilidad */
+        text-align: center; /* Centra los enlaces */
+        color: #ffffff; /* Asegúrate de que el color sea visible */
+        background-color: #28a745; /* Añade un fondo para mayor contraste */
+        border-radius: 5px; /* Estiliza los enlaces */
+        margin-right: 4%;
+    }
+
+    nav > a:hover {
+        background-color: #1e7e34; /* Cambia el color al pasar el cursor */
+        color: #fff; /* Asegura un buen contraste */
+    }
+
+    .menu {
+        list-style: none;
+        font-size: 6px;
+        padding: 0;
+        margin-left: 20%;
+        display: flex;
+        align-items: center;
+       
+        border-radius: 10px;
+        padding: 5px 10px; /* Espaciado dentro del menú */
+        
+    }
+
+    .menu > li {
+        position: relative; /* Asegúrate de que el menú tenga un contenedor relativo */
+    }
+
+    /* Cambiar la visibilidad al tocar el menú */
+    .menu > li:focus-within .dropdown {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    /* Estilo adicional para la activación del menú */
+    .menu > li .dropdown {
+        position: absolute; /* Asegura que el menú se muestre encima de otros elementos */
+        top: 100%; /* Ajuste según sea necesario */
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+
+    .card {
+        display: flex;
+        flex-direction: row; /* Cambio para que los elementos estén uno al lado del otro */
+        
+        align-items: flex-start;
+        padding: 18px; /* Ajusta el espacio alrededor de la tarjeta */
+        
+    }
+
+    .card-img-top {
+      
+        width: 50%; /* Reduce el tamaño de la imagen */
+        height: 100%; /* Ajusta la altura automáticamente */
+        margin-top: -30px;
+       
+
+    }
+
+    .card-body {
+        /* Ocupa el otro 50% del espacio */
+       padding: 30%;
+    }
+
+    .card-title{
+
+        text-align:center; /* Asegura que el texto esté alineado a la izquierda */
+        margin-top: -10%;
+        font-size: 16px; /* Ajusta el tamaño de la fuente para dispositivos pequeños */
+    }
+   
+.card-text{
+    line-height: 1.2;
+   
+    padding: 0px; /* Reduce el espacio interno si es necesario */
+     margin-top: -8px;
+    font-size: 12.30px;
+}
+
+    .card-header {
+        font-size: 10px; /* Ajusta el tamaño del texto del encabezado */
+    }
+
+    .tarjeta {
+        flex: 1;
+        max-width: 90%;  /* Ajusta el tamaño máximo de la tarjeta para que no se desborde */
+        margin: 20px auto;  /* Añade un margen para separación entre tarjetas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Añadir un pequeño sombra para darle profundidad */
+        padding: 8px;  /* Añadir algo de espacio dentro de la tarjeta */
+    }
+
+
+    .product-content {
+        grid-template-columns: 1fr;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-1 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        font-size: 10px;
+    }
+
+    .card-body {
+        padding: 6px;
+    }
+    .knowledge__container {
+        display: flex;
+        flex-direction: column-reverse; /* Pone el texto antes de la imagen */
+        align-items: center;
+        gap: 1em;
+    }
+
+    .knowledge__picture {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .knowledge__img {
+        margin: 0 auto;
+        width: 80%; /* Ajusta el tamaño de la imagen */
+        display: block;
+        object-fit: cover; /* Asegura que la imagen se vea correctamente */
+    }
+
+    .knowledge__paragraph {
+        line-height: 1.5;
+        margin: 0;
+        margin-bottom: 60px;
+        font-size: 14px; /* Ajusta el tamaño del texto */
+        text-align: center; /* Centra el texto */
+    }
+
+    .subtitle {
+        font-size: 18px; /* Reduce el tamaño del título */
+        margin-top: 5px;
+        margin-bottom: 10px;
+        text-align: center; /* Centra el título */
+    }
+
+    
+    
+    .btn-ver-mas {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .testimony__container{
+        display: grid;
+        grid-template-columns: 30px 1fr 30px;
+        gap: 1em;
+        align-items: center;
+    }
+    
+    .testimony__body{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    
+    .testimony__body--show{
+        pointer-events: unset;
+        opacity: 1;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    .testimony__img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 40% 60%;
+    }
+    
+    .testimony__texts{
+       margin-bottom: 20%;
+        margin-left: 10%;
+        margin-top: 88px;
+        max-width: 200px;
+    }
+    
+    .testimony__texts h2{
+     
+        text-align: center;
+        font-size: 18px;
+        color: #000000;
+    
+    }
+    
+    .testimony__review { 
+        font-size: 13px;
+        margin-top: -65px; 
+        text-align: center;
+        text-transform: uppercase;
+       
+        /* Margen superior negativo para acercar el párrafo al título */ }
+    
+    
+    
+    .testimony h1{
+        font-family: "Anton";
+        text-align: center;
+        font-size: 60px;
+        color: #4cae4c;
+    
+    }
+    
+    .testimony__arrow{
+        width: 70%;
+        cursor: pointer;
+    }  
+
+
+
+
+
+
+
+
+
+    footer .contenedor-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .content-foo {
+        margin-bottom: 20px;
+    }
+}
+
+
